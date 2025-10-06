@@ -78,5 +78,17 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching About Us page data
+app.get('/about', (req, res) => {
+  res.json({
+    name: "Zuhair Khalid",
+    description: [
+      "I'm a Computer Science and Math major at NYU Abu Dhabi.",
+      "I’m passionate about machine learning, quantitative finance, and AI-driven problem solving.",
+    ],
+    photoUrl: "/zuhair.jpg"
+  });
+});
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
